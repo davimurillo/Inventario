@@ -73,14 +73,15 @@ $html.='			<div id="contenido" class="col-lg-12" style="margin-top:100px;  ">
 						<td align="center" width="15%" style="font-weight:bold"> MODELO </td>
 						<td align="center" width="10%" style="font-weight:bold"> SERIAL </td>
 						<td align="center" width="25%" style="font-weight:bold"> ACCESORIOS </td>
-						<td align="center" width="5%" style="font-weight:bold"> PLACA </td>
+						<td align="center" width="5%" style="font-weight:bold"> PLACA NGR </td>
+						<td align="center" width="5%" style="font-weight:bold"> PLACA TI </td>
 						<td align="center" width="10%" style="font-weight:bold"> CANTIDAD </td>
 					</tr>
 				</thead>
 				<tbody>
 			';
 				$c=0;
-				$sql_h="SELECT nx_cantidad,tx_nombre_tipo, tx_marca, tx_modelo, tx_serial, tx_accesorios, tx_ngr FROM vie_tbl_movimiento a WHERE a.tx_guia='".$_GET['guia']."' and id_tipo_movimiento=2";
+				$sql_h="SELECT nx_cantidad,tx_nombre_tipo, tx_marca, tx_modelo, tx_serial, tx_accesorios, tx_ngr, (SELECT tx_placati FROM mod_producto WHERE id_producto=a.id_producto) as placa_ti FROM vie_tbl_movimiento a WHERE a.tx_guia='".$_GET['guia']."' and id_tipo_movimiento=2";
 				$res_h=abredatabase(g_BaseDatos,$sql_h);
 				while($row_h=dregistro($res_h)){
 			        $c=$c+1;
@@ -93,6 +94,7 @@ $html.='			<div id="contenido" class="col-lg-12" style="margin-top:100px;  ">
 						<td align="center" style="font-size:10px">'.strtoupper($row_h['tx_serial']).'</td>
 						<td align="left" style="font-size:10px">'.strtoupper($row_h['tx_accesorios']).'</td>
 						<td align="center" style="font-size:10px">'.strtoupper($row_h['tx_ngr']).'</td>
+						<td align="center" style="font-size:10px">'.strtoupper($row_h['placa_ti']).'</td>
 						<td align="center" style="font-size:10px">'.$row_h['nx_cantidad'].'</td>
 					</tr>';
 					}

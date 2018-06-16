@@ -1,6 +1,7 @@
 ﻿<?php require_once('common.php'); checkUser(); 
 require_once '../lib/Excel/reader.php';
 $data = new Spreadsheet_Excel_Reader();
+date_default_timezone_set('America/Lima');
 $data->setOutputEncoding('UTF-8');
 $data->read($_POST['archivo']);
 $datos_nuevos=0;
@@ -28,6 +29,7 @@ for ($i = 4; $i <= $data->sheets[0]['numRows']; $i++) {
 		}else{
 			$condicion= 81;
 		}
+		
 		
 		 $sql_inventario="SELECT id_producto FROM mod_producto WHERE tx_serial='".$serial."'";
 		$res_inventario=abredatabase(g_BaseDatos,$sql_inventario);

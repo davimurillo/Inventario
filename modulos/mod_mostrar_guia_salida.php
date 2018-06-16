@@ -96,12 +96,13 @@ date_default_timezone_set($_SESSION['zona_horario']);
 						<td align="center" style="font-family:ariel; font-size: 12px"> MODELO </td>
 						<td align="center" style="font-family:ariel; font-size: 12px"> SERIAL </td>
 						<td align="center" style="font-family:ariel; font-size: 12px"> ACCESORIOS </td>
-						<td align="center" style="font-family:ariel; font-size: 12px"> PLACA </td>
+						<td align="center" style="font-family:ariel; font-size: 12px"> PLACA NGR</td>
+						<td align="center" style="font-family:ariel; font-size: 12px"> PLACA TI </td>
 						<td align="center" style="font-family:ariel; font-size: 12px"> CANTIDAD </td>
 					</tr>
 			';
 				$c=0;
-				$sql="SELECT nx_cantidad,tx_nombre_tipo, tx_marca, tx_modelo, tx_serial, tx_accesorios, tx_ngr FROM vie_tbl_movimiento a WHERE a.tx_guia='".$_GET['guia']."' and id_tipo_movimiento=2";
+				$sql="SELECT nx_cantidad,tx_nombre_tipo, tx_marca, tx_modelo, tx_serial, tx_accesorios, tx_ngr, (SELECT tx_placati FROM mod_producto WHERE id_producto=a.id_producto) as placa_ti FROM vie_tbl_movimiento a WHERE a.tx_guia='".$_GET['guia']."' and id_tipo_movimiento=2";
 				$res=abredatabase(g_BaseDatos,$sql);
 				while($row=dregistro($res)){
 			        $c=$c+1;
@@ -113,6 +114,7 @@ date_default_timezone_set($_SESSION['zona_horario']);
 						<td align="center" style="font-family:ariel; font-size: 12px">'.strtoupper($row['tx_serial']).'</td>
 						<td align="left" style="font-family:ariel; font-size: 12px">'.strtoupper($row['tx_accesorios']).'</td>
 						<td align="center" style="font-family:ariel; font-size: 12px">'.strtoupper($row['tx_ngr']).'</td>
+						<td align="center" style="font-family:ariel; font-size: 12px">'.strtoupper($row['placa_ti']).'</td>
 						<td align="center" style="font-family:ariel; font-size: 12px">'.$row['nx_cantidad'].'</td>
 					</tr>';
 					

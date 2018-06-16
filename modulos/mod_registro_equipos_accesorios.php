@@ -549,7 +549,7 @@ $dgrid->setColumnsInEditMode($em_columns);
 	
 	 <!-- Ventana para historial del equipo -->
 	<div class="modal fade" tabindex="-1" id="myModal_importar" role="dialog" style="color:#999; ">
-	  <div class="modal-dialog modal-lg">
+	  <div class="modal-dialog" style="width:80%">
 		<div class="modal-content" >
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>

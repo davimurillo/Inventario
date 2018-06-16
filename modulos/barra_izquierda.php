@@ -130,6 +130,7 @@
 			<li class="<?php if($formulario==15){ echo "active"; } ?>"><a href="cfg_reportes.php"><i class="fa fa-chevron-circle-right"></i> Reportes</a></li>
 			<li class="<?php if($formulario==16){ echo "active"; } ?>"><a href="cfg_configuracion.php"><i class="fa fa-chevron-circle-right"></i> Configuración General</a></li>
 			<li class="<?php if($formulario==24){ echo "active"; } ?>"><a href="cfg_funciones.php"><i class="fa fa-chevron-circle-right"></i>Funciones</a></li>
+			<li class="<?php if($formulario==24){ echo "active"; } ?>"><a href="mod_carga_modulos.php"><i class="fa fa-chevron-circle-right"></i>Modulos</a></li>
 		<?php } ?>
           </ul>
         </li>
@@ -139,7 +140,7 @@
   </aside>
   <!-- Ventana para BUSCAR EQUIPO -->
 	<div class="modal fade" tabindex="-1" id="myModal_buscar_rapido" role="dialog" style="color:#999; ">
-	  <div class="modal-dialog modal-lg">
+	  <div class="modal-dialog" style="width:80%">
 		<div class="modal-content" >
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
