@@ -37,6 +37,7 @@
 				echo "<script>window.location.href='mod_control_salidas.php';</script>";
 			} else { ?>
 			<div class="content-wrapper">
+				<?php if ($_SESSION['rol']!=1) { ?> 
 				<section class="content-header">
 				  <h1>Dashboard<small>Control panel</small></h1>
 				  <ol class="breadcrumb">
@@ -289,6 +290,11 @@
 						</div>
 					</div>
 				</section>
+				<?php } else {?>
+					<div >
+						<img src="../img/sistema/menu_inicial.png" height="100%" width="100%">
+					</div>
+				<?php }?>
 			</div>
 			<?php } ?>
 			<?php include('pie.php'); ?>
