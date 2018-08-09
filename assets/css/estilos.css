@@ -1,0 +1,63 @@
+﻿/* diseño principal de la Pagina*/
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	color:#777;
+	background-color:#F7F7F7;
+	
+}  
+a{
+	text-decoration:none;
+}
+
+/* estilos de elementos web 
+
+input[type="text"] { border-top:none; border-left:none; border-right:none; border-bottom:solid 1px #999; background-color:#F7F7F7;}
+*/
+
+/* botones del menu principal */
+.boton_activo {
+  padding:10px 0px 10px 0px;
+  text-align:center;
+  background-color:#006699; 
+  color:#fff; 
+  font-weight:bold;
+  border-right:1px solid #ccc;
+   cursor:pointer;
+}
+.boton_sucesos {
+  padding:10px 0px 10px 0px;
+  text-align:center;
+  background-color:#5CB85C; 
+  color:#fff; 
+  font-weight:bold;
+}
+.boton_inactivo{
+  padding:10px 0px 10px 0px;
+  text-align:center;
+  background-color:#999; 
+  color:#fff; 
+  border-right:1px solid #ccc;
+ cursor:pointer;
+}
+.boton_inactivo_na{
+  
+  text-align:center;
+  background-color:#999; 
+  color:#fff; 
+ 
+  
+}
+
+.boton_inactivo:hover{
+	background-color:#006699;	
+}
+
+.badge-notify{
+   background:red;
+   position:relative;
+   top: -20px;
+   left: -35px;
+}

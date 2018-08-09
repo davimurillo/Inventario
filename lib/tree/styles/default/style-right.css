@@ -1,0 +1,33 @@
+.tmTree ul.tmSubTree
+{
+    background: url(images/line.gif) repeat-y;
+    background-position: right top;
+}
+.tmTree li.tmSingle
+{  
+    background: url(images-right/node.gif) no-repeat;
+    background-position: right top;
+}
+ul.tmTree li.tmLast
+{
+    background: url(images-right/lastnode.gif) no-repeat;
+    background-position: right top;
+}
+ul.tmTree li.tmFirst
+{
+    background: url(images-right/firstnode.gif) no-repeat;
+    background-position: right top;
+}
+.tmNoChildren .tmNode
+{
+    margin-right: 12px;
+}
+.tmTree ul, .tmSubTree ul
+{
+    /*offset for each menu level*/
+    padding-right: 18px;
+}
+.tmImage
+{
+    margin-left: 3px;
+}

@@ -1,0 +1,19 @@
+.tmExpanded .tmNode,.tmCollapsed .tmNode
+{
+    /*distance between tree line and node*/
+    margin-left: 5px;
+}
+.tmNoChildren .tmNode
+{
+    margin-left: 15px;
+}
+.tmTree ul
+{
+    /*offset for each menu level*/
+    padding-left: 18px;
+}
+.tmImage
+{
+    /*distance between tree line and node*/
+    padding-right: 1px;
+}

@@ -1,0 +1,8 @@
+.tmTree ul .tmSingle, .tmTree ul .tmLast
+{
+    padding-top: 0;
+}
+.tmCollapsed, .tmExpanded, .tmNoChildren
+{
+    padding: 0;
+}
