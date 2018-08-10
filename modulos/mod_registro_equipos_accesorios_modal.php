@@ -156,7 +156,7 @@ require_once('common.php'); checkUser();
 						</div>
 						<div class="col-xs-2">
 							<label>Costo USD</label>
-							<input id="costo" class="form-control" type="text" placeholder="costo" required="required">
+							<input id="costo" class="form-control" type="number" placeholder="costo" required="required">
 						</div>
 						<div class="col-xs-2">
 							<label>Ngr</label>

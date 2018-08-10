@@ -11,7 +11,7 @@
 	
 	define("g_TipoBaseDatos", "pgsql");
 	define("g_User", "postgres");
-	define("g_Pass", "ngr\$\$inventario");
+	define("g_Pass", "usbw");
 	define("g_Port", "5432");
 	define("g_ServidorBaseDatos","localhost");
 	define("g_BaseDatos", "INVENTARIO");

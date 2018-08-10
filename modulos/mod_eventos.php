@@ -360,7 +360,6 @@
 	}
 	function borrar_registro_masivo(id){
 			$("#borrar"+id).load("mod_eventos.php",{'id':id,'guia':'<?php echo $_POST['guia']; ?>','fecha':'<?php echo $_POST['fe_entrada']; ?>', 'evento':'101'});
-		return false;
 	}
   </script>	
 	<?php 
